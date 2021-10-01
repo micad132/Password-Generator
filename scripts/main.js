@@ -7,6 +7,7 @@ const numberEl = document.querySelector('#numbers');
 const symbolsEl = document.querySelector('#symbols');
 const generateButtonEl = document.querySelector('#generate');
 const checkboxes = document.querySelectorAll('input[type=checkbox]');
+const  clipboardBtn = document.querySelector('#clipboard');
 
 
 
@@ -15,8 +16,30 @@ const checkboxes = document.querySelectorAll('input[type=checkbox]');
 
 
 
+function clipboardEvent() {
 
 
+    const textarea = document.createElement('textarea');
+    const password = resultEl.innerText;
+
+    if(!password)
+    {
+        return;
+    }
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    alert("Copied");
+
+
+
+
+
+
+}
 
 
 
@@ -42,6 +65,11 @@ function generatePassword(){
 
     
     const passwordLength = passwordEl.value;
+
+    if(passwordLength > 20){
+
+        return;
+    }
 
     
 
@@ -98,7 +126,7 @@ function validateCheckboxes(functions){
     
 
 
-    console.log(booleanArr);
+    
 
     
 
@@ -190,3 +218,4 @@ function getRandomSymbol(){
 
 
 generateButtonEl.addEventListener('click', generatePassword);
+clipboardBtn.addEventListener('click', clipboardEvent);
