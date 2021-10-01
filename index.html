@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css" integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./scripts/main.js" defer></script>
+</head>
+<body>
+
+    
+    
+    <main>
+
+
+        
+
+        <div class="generator">
+
+                <h1>Password Generator</h1>
+
+                <div class="generator__result">
+
+                    <span class="result" id="result"></span>
+                    <button class="btn" id="clipboard">
+
+                        <i class="far fa-clipboard"></i>
+
+
+                    </button>
+
+
+                </div>
+
+                <div class="generator__settings">
+
+                    <div class="generator__settings__setting">
+
+                        <label for="length">Password Length</label>
+                        <input type="number"  id="length" min="4" max="20" value="10">
+
+                        
+
+
+                    </div>
+                    <div class="generator__settings__setting">
+
+                        <label for="lowercase">Include lowercase letters</label>
+                        <input type="checkbox"  id="lowercase" checked>
+                    </div>
+                    <div class="generator__settings__setting">
+
+                        <label for="uppercase">Include uppercase letters</label>
+                        <input type="checkbox"  id="uppercase" checked>
+
+
+                    </div>
+                    <div class="generator__settings__setting">
+
+                        <label for="numbers">Include numbers</label>
+                        <input type="checkbox"  id="numbers" checked>
+                    </div>
+                    <div class="generator__settings__setting">
+
+                        <label for="symbols">Include symbols</label>
+                        <input type="checkbox"  id="symbols" checked>
+                    </div>
+
+
+
+                </div>
+
+                <button class="btn generate" id="generate">
+
+                    Generate Password
+
+                </button>
+                
+
+
+
+
+        </div>
+
+
+
+
+
+    </main>
+
+
+</body>
+</html>
