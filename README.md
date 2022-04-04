@@ -1,4 +1,5 @@
 # Password-Generator
+One of my first mini-projects.
 Password Generator built with HTML/SCSS/JS
 
 
